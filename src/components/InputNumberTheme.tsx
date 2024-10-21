@@ -1,11 +1,11 @@
 import { InputNumber, InputNumberProps, Tooltip } from "antd";
 import styled from "styled-components";
 
-export const InputNumberStyled = styled(InputNumber)`
+export const InputNumberStyled = styled(InputNumber<number>)`
   width: 75%;
 `;
 
-export const InputNumberTheme = (props: InputNumberProps) => (
+export const InputNumberTheme = (props: InputNumberProps<number>) => (
   <Tooltip placement="topLeft" title={props.placeholder} trigger={["focus"]}>
     <InputNumberStyled size="large" {...props} />
   </Tooltip>

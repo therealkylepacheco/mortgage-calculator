@@ -2,7 +2,7 @@ import { InputNumberProps } from "antd";
 import React from "react";
 import { InputNumberTheme } from "./InputNumberTheme";
 
-export const InputDollars = (props: InputNumberProps) => {
+export const InputDollars = (props: InputNumberProps<number>) => {
   return (
     <InputNumberTheme
       {...props}
