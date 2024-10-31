@@ -6,9 +6,24 @@ export const OutputContainer = styled.div`
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 48px;
   height: 100vh;
   justify-content: center;
-  padding: 24px;
   width: 67vw;
+`;
+
+export const SectionContainer = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const OutputMain = styled.div`
+  font-size: 48px;
+`;
+
+export const RateText = styled.div`
+  font-size: 24px;
+  font-weight: lighter;
 `;
