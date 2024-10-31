@@ -1,12 +1,6 @@
 import React from "react";
-import { InputPanel } from "./Panels/InputPanel";
-import { OutputPanel } from "./Panels/OutputPanel";
+import { MonthlyPayment } from "./Calculations/MonthlyPayment";
 
-const App = () => (
-  <div style={{ display: "flex" }}>
-    <InputPanel />
-    <OutputPanel />
-  </div>
-);
+const App = () => <MonthlyPayment />;
 
 export default App;
