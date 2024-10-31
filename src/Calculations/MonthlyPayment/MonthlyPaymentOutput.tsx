@@ -1,26 +1,26 @@
-import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
 import {
   OutputMain,
   OutputPanel,
   RateText,
 } from "../../components/OutputPanel";
 import { paymentSelector } from "../../reducers/paymentSlice";
+import { useMonthlyPaymentOutput } from "./hooks";
 
 export const MonthlyPaymentOutput = () => {
-  const { amount } = useSelector(paymentSelector);
-
-  useEffect(() => console.log("kdp redux amount: ", amount), [amount]);
+  const { monthlyDisplay, showValues, totalDisplay } =
+    useMonthlyPaymentOutput();
 
   return (
     <OutputPanel>
+      {!showValues && <RateText>Enter loan information</RateText>}
       <>
-        <OutputMain>$ month</OutputMain>
-        <RateText>/month</RateText>
+        <OutputMain>{monthlyDisplay}</OutputMain>
+        {showValues && <RateText>/month</RateText>}
       </>
       <>
-        <OutputMain>$ total</OutputMain>
-        <RateText>total cost</RateText>
+        <OutputMain>{totalDisplay}</OutputMain>
+        {showValues && <RateText>total cost</RateText>}
       </>
     </OutputPanel>
   );
