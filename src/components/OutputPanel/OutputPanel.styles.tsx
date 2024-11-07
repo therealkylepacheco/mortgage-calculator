@@ -7,7 +7,7 @@ export const OutputContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 48px;
-  height: 100vh;
+  height: 90vh;
   justify-content: center;
   width: 67vw;
 `;

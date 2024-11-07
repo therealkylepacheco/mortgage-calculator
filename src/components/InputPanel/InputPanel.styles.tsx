@@ -6,8 +6,8 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  height: 100vh;
+  height: 90vh;
   justify-content: center;
-  padding: 24px;
+  padding: 0px 24px;
   width: 33vw;
 `;
