@@ -7,6 +7,6 @@ export const InputNumberStyled = styled(InputNumber<number>)`
 
 export const InputNumberTheme = (props: InputNumberProps<number>) => (
   <Tooltip placement="topLeft" title={props.placeholder} trigger={["focus"]}>
-    <InputNumberStyled inputMode="numeric" size="large" {...props} />
+    <InputNumberStyled inputMode="decimal" size="large" {...props} />
   </Tooltip>
 );
