@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
-export const OutputContainer = styled.div`
+export const OutputContainer = styled.div<{ isMobileView?: boolean }>`
   align-items: center;
-  background-color: #3d5b59;
+  background-color: #0a2472;
   color: #fff;
   display: flex;
   flex-direction: column;
   gap: 48px;
-  height: 90vh;
+  height: ${({ isMobileView }) => (isMobileView ? "60vh" : "90vh")};
   justify-content: center;
-  width: 67vw;
+  width: ${({ isMobileView }) => (isMobileView ? "100vw" : "67vw")};
 `;
 
 export const SectionContainer = styled.div`

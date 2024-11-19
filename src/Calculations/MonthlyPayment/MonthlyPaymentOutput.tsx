@@ -4,7 +4,6 @@ import {
   OutputPanel,
   RateText,
 } from "../../components/OutputPanel";
-import { paymentSelector } from "../../reducers/paymentSlice";
 import { useMonthlyPaymentOutput } from "./hooks";
 
 export const MonthlyPaymentOutput = () => {
