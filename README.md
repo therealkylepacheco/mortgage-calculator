@@ -1,2 +1,1 @@
-# mortgage-calculator
-React mortgage calculator
+# Mortgage Calculator
