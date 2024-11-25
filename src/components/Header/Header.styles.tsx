@@ -9,6 +9,8 @@ export const CustomSelect = styled(Select)`
     .ant-select-selection-item {
       color: white;
       font-size: 24px;
+      max-width: 350px;
+      text-wrap: auto;
     }
   }
 `;
