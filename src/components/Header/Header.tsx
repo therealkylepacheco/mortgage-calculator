@@ -1,11 +1,10 @@
 import React from "react";
 import { CustomSelect, HeaderContainer, Title } from "./Header.styles";
-import { useMobileView } from "../../hooks";
+import { useHeader } from "./useHeader";
+import { Mode } from "../../types";
 
 export const Header = () => {
-  const showSelect = false;
-
-  const isMobileView = useMobileView();
+  const { handleChangeMode, isMobileView, mode, showSelect } = useHeader();
 
   return (
     <HeaderContainer>
@@ -20,15 +19,21 @@ export const Header = () => {
             backgroundColor: "#00072d",
           }}
           popupMatchSelectWidth={false}
+          value={mode}
           variant="borderless"
+          onChange={handleChangeMode}
           options={[
             {
-              label: "Monthly payment",
-              value: "monthlyPayment",
+              label: "Down payment",
+              value: Mode.MonthlyByDown,
+            },
+            {
+              label: "Loan amount",
+              value: Mode.MonthlyPayment,
             },
             {
               label: "Payoff",
-              value: "payoff",
+              value: Mode.Payoff,
             },
           ]}
         />

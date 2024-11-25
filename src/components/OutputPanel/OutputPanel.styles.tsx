@@ -7,8 +7,9 @@ export const OutputContainer = styled.div<{ isMobileView?: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 48px;
-  height: ${({ isMobileView }) => (isMobileView ? "60vh" : "90vh")};
-  justify-content: center;
+  height: ${({ isMobileView }) => (isMobileView ? "50vh" : "90vh")};
+  justify-content: ${({ isMobileView }) =>
+    isMobileView ? "flex-start" : "center"};
   width: ${({ isMobileView }) => (isMobileView ? "100vw" : "67vw")};
 `;
 
@@ -26,4 +27,10 @@ export const OutputMain = styled.div`
 export const RateText = styled.div`
   font-size: 24px;
   font-weight: lighter;
+`;
+
+export const EmptyText = styled.div`
+  font-size: 24px;
+  font-weight: lighter;
+  padding-top: 16px;
 `;

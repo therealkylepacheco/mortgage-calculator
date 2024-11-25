@@ -5,11 +5,10 @@ import {
   OutputPanel,
   RateText,
 } from "../../components/OutputPanel";
-import { useMonthlyPaymentOutput } from "./hooks";
+import { useMonthlyByDownOutput } from "./hooks";
 
-export const MonthlyPaymentOutput = () => {
-  const { monthlyDisplay, showValues, totalDisplay } =
-    useMonthlyPaymentOutput();
+export const MonthlyByDownOutput = () => {
+  const { monthlyDisplay, showValues, totalDisplay } = useMonthlyByDownOutput();
 
   return (
     <OutputPanel>
