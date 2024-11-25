@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { modeSelector } from "./reducers/modeSlice";
 import { Mode } from "./types";
 import { MonthlyByDown } from "./Calculations/MonthlyByDown";
+import { Payoff } from "./Calculations/Payoff";
 
 const App = () => {
   const { mode } = useSelector(modeSelector);
@@ -17,7 +18,7 @@ const App = () => {
       case Mode.MonthlyByDown:
         return <MonthlyByDown />;
       case Mode.Payoff:
-        return <div>KDP payoff</div>;
+        return <Payoff />;
       default:
         return null;
     }
